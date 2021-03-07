@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <style>
+
+html{
+    scroll-behavior: smooth;
+}
+* {padding: 0; margin: 0; }
+body{
+    background: rgb(253, 243, 208);
+}
+.flex-container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      background: rgb(253, 243, 208);
+}
+
+.logo {
+  margin: 0 0 0 .45em;
+  
+}
+    .logo a {
+      color: rgb(28, 24, 22);
+    }
+
+    .logo, .navigation {
+        list-style: none;
+        text-transform: uppercase;
+      
+    }
+
+    .logo a, .navigation a {
+        text-decoration: none;
+        letter-spacing: .45rem;
+      
+    }
+
+.navigation  {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: rgb(0, 0, 0);
+}
+
+.navigation a:hover {
+    background: #c5b8ff;
+}
+
+
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .logo {
+  margin: 0;
+}
+  
+  .navigation  {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+
+@media all and (max-width: 600px) {
+ 
+  .logo {
+    margin: .25em 0;
+    align-self: left; 
+}
+  
+  .navigation {
+    flex-direction: column;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+     
+  }
+  
+  
+}
+
+.bgImage{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.flipCardContainer{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  #avtarImg{
+    width: 100%;
+    height: 300px;
+}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+#fcb1{
+    background-color: #ec790e;
+    color: white;
+    transform: rotateY(180deg);
+}
+#fcb2{
+    background-color: #3b9e3b;
+    color: white;
+    transform: rotateY(180deg);
+}
+#fcb3{
+    background: rgb(255, 247, 216);
+    color: black;
+    transform: rotateY(180deg);
+}
+#fcb4{
+    background-color: #3b9e3b;
+    color: white;
+    transform: rotateY(180deg);
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    background: rgb(253, 243, 208);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+  }
+  
+
+
+    </style>
+    <!-- Navigation bar -->
+    <div class="flex-container">
+        <h1 class="logo">Tushar</a></h1>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#bgContainer">Cover IMG</a></li>
+          <li><a href="#flipCardContainer">Cards</a></li>
+          <li><a href="#footerContainer">footer</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Cover Image -->
+
+      <div class="bgContainer" id="bgContainer">
+        <img src="https://source.unsplash.com/user/erondu/1600x900"><alt="Background Cover Image class="bgImage">
+      </div>
+
+
+
+      <!-- Flip Cards -->
+      <div class="flipCardContainer" id="flipCardContainer">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://raw.githubusercontent.com/adsinghnet/FullStackAssignments/main/Assignment%202/imgAvatar3.png" alt="Avatar" id="avtarImg">
+          </div>
+          <div class="flip-card-back" id="fcb1">
+            <h1>Person 1</h1> 
+            <p>Architect & Engineer</p> 
+            <p>qwerty</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://raw.githubusercontent.com/adsinghnet/FullStackAssignments/main/Assignment%202/imgAvatar2.png" alt="Avatar" id="avtarImg">
+          </div>
+          <div class="flip-card-back"  id="fcb2">
+            <h1>Person 2</h1> 
+            <p>Designer</p> 
+            <p>qwerty</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://raw.githubusercontent.com/adsinghnet/FullStackAssignments/main/Assignment%202/imgAvatar1.png" alt="Avatar" id="avtarImg">
+          </div>
+          <div class="flip-card-back"  id="fcb3">
+            <h1>Person 3</h1> 
+            <p>Creator</p> 
+            <p>qwerty</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://raw.githubusercontent.com/adsinghnet/FullStackAssignments/main/Assignment%202/imgAvatar4.png" alt="Avatar" id="avtarImg">
+          </div>
+          <div class="flip-card-back"  id="fcb4">
+            <h1>Person 4</h1> 
+            <p>Engineer</p> 
+            <p>qwerty</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="footerContainer" id="footerContainer">
+        <footer>
+            <p>Tushar</p>
+            <p><a href="https://github.com/tushar94188/assignmnet-1">Tushar</a></p>
+          </footer>
+    </div>
+
+    </div>
+    
+</body>
+</html>
