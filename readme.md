@@ -44,15 +44,4 @@ GOOGLE_CLIENT_SECRET = hzvlB7ZECoJBf9OEtIZMaQCj
 ## In case of error while running npm install command
 Download: ***[https://drive.google.com/file/d/1OKuw_hyuoxdFpQrxnEeealT2mUChyYAu/view?usp=sharing](https://drive.google.com/file/d/1OKuw_hyuoxdFpQrxnEeealT2mUChyYAu/view?usp=sharing)***
 
-```
-# Run in development
-npm run dev
-
-# Run in production
-npm start
-```
-
-## Website 
-
-***[http://projects.adsingh.net/](http://projects.adsingh.net/)***
 
